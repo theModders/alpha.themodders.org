@@ -1,0 +1,4 @@
+.wip
+.firebase
+node_modules
+*.log

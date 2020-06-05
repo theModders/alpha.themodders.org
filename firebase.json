@@ -1,0 +1,21 @@
+{
+	"firestore": {
+		"rules": "database/permissions.rules",
+		"indexes": "database/indexes.json"
+	},
+	"hosting": {
+		"rewrites": [ {
+			"source": "/forum/**",
+			"function": "forum"
+		}, {
+			"source": "/forum",
+			"function": "forum"
+		}, {
+			"source": "/favicon.ico",
+			"function": "favicon"
+		} ]
+	},
+	"functions": {
+		"source": "."
+	}
+}
