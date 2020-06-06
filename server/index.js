@@ -7,7 +7,7 @@ const runtimeOpts = {
 }
 
 const endpoints = Functions
-		.region('europe-west1')
+		// .region('europe-west1') // not allowed for hosting redirect
 		.runWith(runtimeOpts)
 		.https;
 
