@@ -16,9 +16,9 @@
 		"firebase-tools": "^8.4.1"
 	},
 	"scripts": {
-		"start": "npm run build && firebase emulators:start --inspect-functions",
-		"clean": "rm -rf ../.build/server",
-		"build": "npm run clean && npm install && babel . --out-dir ../.build/server --source-maps --copy-files --ignore node_modules && cd ../.build/server && npm install",
-		"deploy": "npm run build && cd .. && firebase deploy"
+		"start": "../dev/start",
+		"clean": "../dev/clean",
+		"build": "../dev/build",
+		"deploy": "../dev/deploy"
 	}
 }

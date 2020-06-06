@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o nounset
+
+DEV_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+PROJECT_ROOT="${DEV_DIR}/.."
+SOURCE_DIR="${PROJECT_ROOT}/server"
+BUILD_DIR="${PROJECT_ROOT}/.build/server"
+
+set -x
+${DEV_DIR}/clean
+cd ${SOURCE_DIR}
+npm install
+./node_modules/.bin/babel ${SOURCE_DIR} --out-dir ${BUILD_DIR} --ignore ${SOURCE_DIR}/node_modules
+cp -r node_modules ${BUILD_DIR}/
