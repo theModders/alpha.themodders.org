@@ -1,0 +1,9 @@
+{
+	"files.exclude": {
+		".build": true,
+		".firebase": true,
+		".vscode": true,
+		"**/*.log": true,
+		"**/node_modules": true,
+	}
+}
