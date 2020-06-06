@@ -1,0 +1,112 @@
+.thread>header {
+	--header-horizontal-margin: 16px;
+    margin: 0 var(--header-horizontal-margin);
+    position: fixed; /*keep for backwards compatibility*/
+    position: sticky;
+    width: calc( var(--main-content-width) - calc( 2 * var(--header-horizontal-margin)));
+    max-width: calc( 100% - calc( 2 * var(--header-horizontal-margin)));
+    min-width: calc( var(--min-viewport-width) - calc( 2 * var(--header-horizontal-margin)));
+    z-index: 30;
+    overflow: visible;
+	top: 0;
+	pointer-events: none;
+}
+
+.thread>header>* {
+    display: inline-block;
+	vertical-align: top;
+	padding: 0;
+    margin-top: 24px;
+    margin-bottom: 0;
+    max-width: calc( ( var(--main-content-width) / 2 ) - ( var(--header-horizontal-margin) * 2 ) );
+}
+
+.thread>header li {
+    display: inline-block;
+}
+
+.thread>header>.breadcrumbs,
+.thread>header>.tags a {
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    background: var(--background-color-button);
+    font-size: 12px;
+	pointer-events: all;
+    box-shadow: 0 2px 6px var(--background-color);
+}
+
+.thread>header a {
+    color: var(--text-color-misc);
+}
+
+.thread>header a:hover,
+.thread>header a:active,
+.thread>header a:focus {
+    color: var(--accent-color);
+}
+
+
+@media (max-width: 500px) {
+	.thread>header {
+	    --header-horizontal-margin: 8px;
+    }
+	.thread>header>* {
+        margin-top: 8px;
+		margin-bottom: 0;
+    }
+}
+
+
+@media (max-width: 770px) {
+	.thread>header>* {
+        max-width: 50%;
+    }
+}
+
+
+
+/**breadcrumbs*/
+.thread>header>.breadcrumbs {
+    padding: 6px 12px;
+    height: 32px;
+    border-radius: 5px;
+}
+
+.thread>header>.breadcrumbs li:first-child a {
+	font-weight: bold;
+	font-family: var(--header-font);
+	color: var(--accent-color);
+}
+
+.thread>header>.breadcrumbs li:after {
+    content: '/';
+	padding: 0 8px;
+	color: var(--text-color-misc);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.thread>header>.breadcrumbs li:last-child:after {
+    display: none;
+}
+
+
+
+
+/**tags*/
+.thread>header>.tags {
+    float: right;
+    text-align: right;
+    max-height: 86px;
+}
+
+.thread>header>.tags a {
+    text-transform: lowercase;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.thread>header>.tags a:before {
+    content: '#';
+    padding-right: 4px;
+}

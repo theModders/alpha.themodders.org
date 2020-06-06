@@ -1,0 +1,53 @@
+body {
+	font-family: var(--body-font);
+	margin: 0;
+	background: var(--background-color);
+	color: var(--text-color);
+	height: 100vh;
+	overflow-y: auto;
+	text-size-adjust: none;
+	cursor: default;
+}
+
+* {
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+	color: var(--accent-color);
+}
+
+a {
+	color: var(--accent-color);
+	text-decoration: none;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+::selection {
+	color: var(--background-color);
+	background: var(--accent-color-selection);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--header-font);
+}
+
+/** minimum ui width */
+@media (max-width: 240px) {
+	html {
+		overflow-x: auto;
+	}
+	body {
+		width: var(--min-viewport-width);
+	}
+}

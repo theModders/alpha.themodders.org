@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<script type="module">
+	import Config from "/client/core/config.js";
+	
+	document.body.style.display = "none"
+	if (! document.location.href.startsWith(Config.SERVER_URL)) {
+		window.location.href = Config.SERVER_URL + document.location.pathname; 
+	} else {
+		window.location.href = Config.SERVER_URL + "/search?404=" + document.location.pathname; 
+	}
+</script>
+404 Not Found

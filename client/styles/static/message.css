@@ -1,0 +1,177 @@
+.thread > .message {
+    padding: 32px 64px;
+    border: 1px solid transparent;
+    margin: 18px 0px;
+    border-radius: 8px;
+}
+
+.thread > .message.reply {
+    border: 1px solid var(--border-color);
+}
+
+.thread > .message.original {
+    background: var(--background-color-elevated);
+}
+
+@media (max-width: 770px) {
+    .thread > .message,
+    .thread > .message.reply {
+        padding: 32px 8vw;
+        margin: 0;
+        border-radius: 0;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .thread > .message,
+    .thread > .message.reply {
+        padding: 16px 8vw;
+    }
+}
+
+/**header*/
+.thread > .message > header {
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.thread > .message > header a[rel=author] {
+    display: inline-block;
+    font-weight: normal;
+    font-family: var(--header-font);
+    font-size: 13px;
+}
+
+.thread > .message > header .role {
+    display: block;
+    font-weight: 600;
+    color: var(--text-color-misc);
+    font-family: var(--body-font);
+    font-size: 12px;
+}
+
+.thread > .message > header a[rel=bookmark] {
+    float: right;
+    color: var(--text-color-misc);
+    font-weight: normal;
+    margin-right: 8px;
+}
+
+.thread > .message > header a[rel=bookmark]:hover {
+    color: var(--accent-color);
+}
+
+.thread > .message > header a[rel=bookmark]:before {
+    font-family: 'Material Icons';
+    content: "bookmark";
+    font-size: 19px;
+    line-height: 21.6px;
+    vertical-align: top;
+}
+
+.thread > .message > header a[rel=bookmark]:after {
+    content: attr(href);
+}
+
+.thread > .message > header a[rel=bookmark] .position {
+    position: relative;
+    top: -100px;
+    width: 0;
+    display: inline-block;
+    vertical-align: top;
+    visibility: hidden;
+}
+
+.thread > .message .score {
+    float: right;
+    background: var(--text-color-misc);
+    color: var(--background-color);
+    border: none;
+    border-radius: 50px;
+    font-weight: 800;
+    margin-left: 6px;
+    user-select: text;
+    padding: 0 4px;
+}
+
+/* avatar placeholder */
+.thread > .message > header:before {
+    font-family: 'Material Icons';
+    content: "account_circle";
+    font-size: 42px;
+    line-height: 42px;
+    color: var(--text-color-misc);
+    margin-right: 10px;
+}
+
+.thread > .message .score:before {
+    content: '+';
+}
+
+@media (max-width: 500px) {
+    .thread > .message > header {
+        margin-bottom: 4px;
+        max-height: 24px;
+    }
+    .thread > .message > header:before {
+        display: none;
+    }
+    .thread > .message > header a[rel=author],
+    .thread > .message > header .role {
+        display: inline-block;
+    }
+    .thread > .message > header .role {
+        margin-left: 4px;
+        vertical-align: top;
+    }
+    .thread > .message > header a[rel=author] {
+        max-width: calc(100% - 70px);
+    }
+    .thread > .message > header a[rel=bookmark] {
+        width: 70px;
+        text-align: right;
+    }
+}
+
+
+/**body*/
+.thread > .message .body {
+    cursor: auto;
+}
+.thread > .message .body > a {
+    font-weight: bold;
+}
+
+.thread > .message p:first-of-type {
+    margin-top: 0;
+}
+
+.thread > .message p:last-child {
+    margin-bottom: 0;
+}
+
+.thread > .message blockquote>cite {
+    display: block;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.thread > .message blockquote>cite a {
+    font-weight: normal;
+    color: rgb(255 255 255 / 0.5);
+}
+
+.thread > .message blockquote {
+    font-style: italic;
+    padding: 0.5em 20px;
+    margin: 0.5em 20px;
+    background: #28292c;
+    border-radius: 8px;
+}
+
+.thread > .message blockquote a[rel=author]:before {
+    content: '~ ';
+}

@@ -1,0 +1,17 @@
+{
+	"name": "theModders.org",
+	"description": "Modding and game development",
+	"start_url": "https://themodders.web.app/?appMode=true",
+	"display": "standalone",
+	"background_color": "#202124",
+	"theme_color": "#202124",
+	"scope": "https://themodders.web.app/",
+	"icons": [
+		{
+			"src": "../images/icon.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"gcm_sender_id": "103953800507"
+}

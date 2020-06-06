@@ -1,12 +1,13 @@
 const Config = require("../core/config.js");
 
 module.exports = {
-	PAGE_HEAD: 
+	PAGE_HEAD: //TODO: make lang dynamic
 `<!DOCTYPE HTML>
+<html lang="${Config.LANG}">
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${Config.CLIENT_URL}/styles/static/main.css">
 <link rel="manifest" href="${Config.CLIENT_URL}/meta/manifest.json">
-<script type="module" async src="${Config.CLIENT_URL}/scripts/main.js"></script>`,
+<script type="module" async src="${Config.CLIENT_URL}/index.js"></script>`,
 
 	truncate: function(text, maxLength, ellipsis = "...") {
 		if (text.length <= maxLength) {

@@ -1,9 +1,17 @@
 {
 	"firestore": {
-		"rules": "database/permissions.rules",
-		"indexes": "database/indexes.json"
+		"rules": "server/database/permissions.rules",
+		"indexes": "server/database/indexes.json"
 	},
 	"hosting": {
+		"public": ".",
+		"ignore": [
+			"**/node_modules/**",
+			"**/.*",
+			"server/**",
+			"firebase.json",
+			"*.log"
+		],
 		"rewrites": [ {
 			"source": "/forum/**",
 			"function": "forum"
@@ -11,11 +19,11 @@
 			"source": "/forum",
 			"function": "forum"
 		}, {
-			"source": "/favicon.ico",
-			"function": "favicon"
+			"source": "/search",
+			"function": "search"
 		} ]
 	},
 	"functions": {
-		"source": "."
+		"source": ".build/server"
 	}
 }
