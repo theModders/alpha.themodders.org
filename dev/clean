@@ -3,4 +3,5 @@ set -o errexit
 set -o nounset
 
 DEV_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-rm -rf ${DEV_DIR}../.build/server
+set -x
+rm -rf "${DEV_DIR}/../.build/server"
