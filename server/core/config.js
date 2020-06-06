@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	CLIENT_URL: "https://alpha.themodders.org/client",
 	SERVER_URL: "https://beta.themodders.org",
 	FORUM_NAME: "themodders.org",

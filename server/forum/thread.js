@@ -1,4 +1,4 @@
-module.exports = class Thread {
+export default class Thread {
 	static retrieve(location) {
 		console.log("retrieve " + location);
 		return new Thread();

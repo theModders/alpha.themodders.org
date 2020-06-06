@@ -1,6 +1,6 @@
-const Config = require("../core/config.js");
+import Config from "../core/config.js";
 
-module.exports = {
+export default {
 	PAGE_HEAD: //TODO: make lang dynamic
 `<!DOCTYPE HTML>
 <html lang="${Config.LANG}">

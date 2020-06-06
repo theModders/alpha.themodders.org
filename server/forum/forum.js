@@ -1,7 +1,7 @@
-const Thread = require("./thread.js");
-const Utils = require("./utils.js");
+import Thread from "./thread.js";
+import Utils from "./utils.js";
 
-module.exports = {
+export default {
 	PATH_PREFIX_REGEXP: new RegExp("^/forum/"),
 
 	async handleRequest(req, res) {

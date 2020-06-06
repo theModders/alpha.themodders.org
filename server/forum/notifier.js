@@ -1,4 +1,4 @@
-const utils = require('./utils.js');
+import utils from "./utils.js";
 
 const OBSOLETE_TOKEN_ERROR_CODES = [ 
 	"messaging/invalid-registration-token",
@@ -7,7 +7,7 @@ const OBSOLETE_TOKEN_ERROR_CODES = [
 const PROFILE_PIC_PLACEHOLDER_URL = "/images/profile_placeholder.png"
 const NOTIFICATION_TARGET_URL = `https://${process.env.GCLOUD_PROJECT}.web.app`;
 
-module.exports = class Notifier {
+export default class Notifier {
 	constructor(firestore, messaging) {
 		this.fcmTokens = firestore.collection("fcmTokens");
 		this.messaging = messaging;
