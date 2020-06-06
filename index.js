@@ -1,5 +1,5 @@
 import * as Functions from "firebase-functions";
-import Forum from "./forum/forum.js";
+import Forum from "./server/forum/forum.js";
 
 const runtimeOpts = {
 	timeoutSeconds: 1,

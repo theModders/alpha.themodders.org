@@ -1,4 +1,4 @@
-import Config from "../core/config.js";
+import Config from "../../core/config.js";
 
 export default {
 	PAGE_HEAD: //TODO: make lang dynamic

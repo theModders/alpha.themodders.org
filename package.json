@@ -16,9 +16,9 @@
 		"firebase-tools": "^8.4.1"
 	},
 	"scripts": {
-		"start": "../dev/start",
-		"clean": "../dev/clean",
-		"build": "../dev/build",
-		"deploy": "../dev/deploy"
+		"start": "./dev/start",
+		"clean": "./dev/clean",
+		"build": "./dev/build",
+		"deploy": "./dev/deploy"
 	}
 }

@@ -7,8 +7,12 @@
 		}
 	]],
 	"ignore": [
+		"client",
+		"test",
+		".wip",
 		"node_modules",
-		"**/node_modules/**"
+		"**/node_modules/**",
+		"**/.*"
 	],
 	"sourceMaps": true
 }
