@@ -1,5 +1,5 @@
 {
-  "projects": {
-    "server.themodders.org": "themodders"
-  }
+	"projects": {
+		"alpha.themodders.org": "themodders"
+	}
 }
