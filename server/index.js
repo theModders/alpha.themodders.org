@@ -1,5 +1,5 @@
-const Functions = require('firebase-functions');
-const Forum = require("./forum/forum.js");
+import * as Functions from "firebase-functions";
+import Forum from "./forum/forum.js";
 
 const runtimeOpts = {
 	timeoutSeconds: 1,
