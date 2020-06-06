@@ -5,4 +5,5 @@ set -o nounset
 DEV_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 ${DEV_DIR}/build
 set -x
-firebase emulators:start --inspect-functions
+nohup firebase emulators:start --inspect-functions > /dev/null 2>&1 &
+nohup xdg-open http://localhost:5000/forum > /dev/null 2>&1 &
