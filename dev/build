@@ -10,7 +10,7 @@ BUILD_DIR="${PROJECT_ROOT}/.build/server"
 set -x
 ${DEV_DIR}/clean
 cd "${SOURCE_DIR}"
-npm install
-./node_modules/.bin/babel "${SOURCE_DIR}" --out-dir "${BUILD_DIR}" --ignore "${SOURCE_DIR}/node_modules"
-# cp -r node_modules ${BUILD_DIR}/
+time npm install
+mkdir -p ${BUILD_DIR}
 ln -s "${SOURCE_DIR}/node_modules" "${BUILD_DIR}/node_modules"
+time ./node_modules/.bin/babel "${SOURCE_DIR}" --out-dir "${BUILD_DIR}" --ignore "${SOURCE_DIR}/node_modules" --copy-files
