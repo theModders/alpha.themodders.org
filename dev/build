@@ -8,9 +8,9 @@ BUILD_DIR="${PROJECT_ROOT}/.build/"
 
 cd "${PROJECT_ROOT}"
 set -x
-${DEV_DIR}/clean
+"${DEV_DIR}/clean"
 time npm install
-mkdir -p ${BUILD_DIR}
+mkdir -p "${BUILD_DIR}"
 ln -s "${PROJECT_ROOT}/node_modules" "${BUILD_DIR}/node_modules"
-time ${PROJECT_ROOT}/node_modules/.bin/babel . --out-dir "${BUILD_DIR}"
+time "${PROJECT_ROOT}/node_modules/.bin/babel" . --out-dir "${BUILD_DIR}"
 cp "${PROJECT_ROOT}/package.json" "${BUILD_DIR}/package.json"

@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 set -o errexit
 set -o nounset
-set -x
 
 DEV_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-${DEV_DIR}/build
+"${DEV_DIR}/build"
 EMULATOR_PIDS=$( pgrep -f firebase || true )
 EMULATOR_PIDS=$( echo ${EMULATOR_PIDS} | grep -v "^${$}\$" )
 if [[ ! -z "${EMULATOR_PIDS}" ]]
 then
 	kill ${EMULATOR_PIDS}
 fi
-nohup firebase emulators:start --inspect-functions > /dev/null 2>&1 & > /dev/null 2>&1
-nohup xdg-open http://localhost:5000/forum > /dev/null 2>&1 & > /dev/null 2>&1
-echo
+nohup xdg-open http://localhost:5000/forum > /dev/null 2>&1 &
+set -x
+cd "${DEV_DIR}/.."
+firebase emulators:start --import=./test/data --inspect-functions

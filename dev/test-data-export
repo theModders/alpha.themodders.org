@@ -3,7 +3,6 @@ set -o errexit
 set -o nounset
 
 DEV_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-"${DEV_DIR}/build"
-cd ..
-set -x
-time firebase deploy
+
+cd "${DEV_DIR}/.."
+firebase emulators:export --force "${DEV_DIR}/../test/data/"
