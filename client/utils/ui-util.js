@@ -19,5 +19,13 @@ export default {
 		metaThemeColor.name = "theme-color";
 		metaThemeColor.content = Config.THEME_COLOR;
 		document.head.appendChild(metaThemeColor);
+	},
+
+	addMetadata(elementName, properties) {
+		const element = document.createElement(elementName);
+		for (var propertyName in properties) {
+			element[propertyName] = properties[propertyName];
+		}
+		document.head.appendChild(element);
 	}
 }
