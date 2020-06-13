@@ -1,15 +1,14 @@
 .thread>header {
-	--header-horizontal-margin: 16px;
-    margin: 0 var(--header-horizontal-margin);
-    position: fixed; /*keep for backwards compatibility*/
+    --header-horizontal-margin: 16px;
+    padding: 0 16px;
+    position: fixed;
     position: sticky;
-    width: calc( var(--main-content-width) - calc( 2 * var(--header-horizontal-margin)));
-    max-width: calc( 100% - calc( 2 * var(--header-horizontal-margin)));
-    min-width: calc( var(--min-viewport-width) - calc( 2 * var(--header-horizontal-margin)));
+    left: 0;
+    width: 100%;
     z-index: 30;
     overflow: visible;
-	top: 0;
-	pointer-events: none;
+    top: 0;
+    pointer-events: none;
 }
 
 .thread>header>* {

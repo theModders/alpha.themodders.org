@@ -61,10 +61,6 @@
     transition: opacity 0.3s;
 }
 
-.thread > .stats:hover {
-    opacity: 1;
-}
-
 .thread > .stats tr {
     display: inline-block;
     text-align: center;
