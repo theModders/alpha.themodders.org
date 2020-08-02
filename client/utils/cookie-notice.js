@@ -1,4 +1,5 @@
 import UiUtil from "./ui-util.js"
+import Config from "../../core/config.js"
 
 export default {
 	COOKIE_NAME: "cookiesAccepted",
@@ -16,7 +17,7 @@ export default {
 	},
 
 	display() {
-		UiUtil.importStyle("/styles/interactive/snackbar.css");
+		UiUtil.importStyle("/styles/interactive/snackbar.css", Config);
 		this.cookieNotice = document.createElement("div");
 		this.cookieNotice.innerHTML = `
 			<div class="snackbar">

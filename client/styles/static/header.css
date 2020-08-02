@@ -1,4 +1,4 @@
-.thread>header {
+body>header {
     --header-horizontal-margin: 16px;
     padding: 0 16px;
     position: fixed;
@@ -11,7 +11,7 @@
     pointer-events: none;
 }
 
-.thread>header>* {
+body>header>* {
     display: inline-block;
 	vertical-align: top;
 	padding: 0;
@@ -20,12 +20,12 @@
     max-width: calc( ( var(--main-content-width) / 2 ) - ( var(--header-horizontal-margin) * 2 ) );
 }
 
-.thread>header li {
+body>header li {
     display: inline-block;
 }
 
-.thread>header>.breadcrumbs,
-.thread>header>.tags a {
+body>header>.breadcrumbs,
+body>header>.tags a {
     backdrop-filter: blur(10px);
     border-radius: 16px;
     background: var(--background-color-button);
@@ -34,22 +34,22 @@
     box-shadow: 0 2px 6px var(--background-color);
 }
 
-.thread>header a {
+body>header a {
     color: var(--text-color-misc);
 }
 
-.thread>header a:hover,
-.thread>header a:active,
-.thread>header a:focus {
+body>header a:hover,
+body>header a:active,
+body>header a:focus {
     color: var(--accent-color);
 }
 
 
 @media (max-width: 500px) {
-	.thread>header {
+	body>header {
 	    --header-horizontal-margin: 8px;
     }
-	.thread>header>* {
+	body>header>* {
         margin-top: 8px;
 		margin-bottom: 0;
     }
@@ -57,7 +57,7 @@
 
 
 @media (max-width: 770px) {
-	.thread>header>* {
+	body>header>* {
         max-width: 50%;
     }
 }
@@ -65,19 +65,19 @@
 
 
 /**breadcrumbs*/
-.thread>header>.breadcrumbs {
+body>header>.breadcrumbs {
     padding: 6px 12px;
     height: 32px;
     border-radius: 5px;
 }
 
-.thread>header>.breadcrumbs li:first-child a {
-	font-weight: bold;
+body>header>.breadcrumbs li:first-child a {
+	font-weight: 400;
 	font-family: var(--header-font);
 	color: var(--accent-color);
 }
 
-.thread>header>.breadcrumbs li:after {
+body>header>.breadcrumbs li:after {
     content: '/';
 	padding: 0 8px;
 	color: var(--text-color-misc);
@@ -85,7 +85,7 @@
     vertical-align: top;
 }
 
-.thread>header>.breadcrumbs li:last-child:after {
+body>header>.breadcrumbs li:last-child:after {
     display: none;
 }
 
@@ -93,19 +93,19 @@
 
 
 /**tags*/
-.thread>header>.tags {
+body>header>.tags {
     float: right;
     text-align: right;
     max-height: 86px;
 }
 
-.thread>header>.tags a {
+body>header>.tags a {
     text-transform: lowercase;
     display: inline-block;
     padding: 5px 10px;
 }
 
-.thread>header>.tags a:before {
+body>header>.tags a:before {
     content: '#';
     padding-right: 4px;
 }

@@ -4,9 +4,9 @@
 	--background-color-button: rgb(138 180 248 / 0.1);
 	--text-color: #e8eaed;
 	--text-color-misc: rgba(255, 255, 255, 0.5);
-	--accent-color: #8ab4f8;
-	--accent-color-selection: #8ab4f8fe; /*+1 bit of transparency*/
-	--header-font: "Ubuntu";
+	--accent-color: #ff7200;
+	--accent-color-selection: #ff7200fe; /*+1 bit of transparency*/
+	--header-font: "Poppins";
 	--body-font: "Open Sans";
 	--font-icon: "Material Icons";
 	--main-content-width: 770px;

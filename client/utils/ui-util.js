@@ -1,24 +1,23 @@
-import Config from "../../core/config.js"
-
 export default {
-	importStyle(url) {
-		// TODO: prevent duplicates
-		const link = document.createElement("link");
-		link.rel = "stylesheet";
-		link.href = Config.CLIENT_URL + url;
-		document.head.appendChild(link);
+	importStyle(url, config) {
+		if (document.querySelector(`link[rel='stylesheet'][href='${url}']`)) {
+			return; // already loaded
+		}
+		this.addMetadata("link", { 
+			rel: "stylesheet", 
+			href: config.CLIENT_URL + url 
+		});
 	},
 
-	configureClient() {
-		const metaViewport = document.createElement("meta");
-		metaViewport.name = "viewport";
-		metaViewport.content="width=device-width,initial-scale=1";
-		document.head.appendChild(metaViewport);
-
-		const metaThemeColor = document.createElement("meta");
-		metaThemeColor.name = "theme-color";
-		metaThemeColor.content = Config.THEME_COLOR;
-		document.head.appendChild(metaThemeColor);
+	configureClient(config) {
+		this.addMetadata("meta", { 
+			name: "viewport", 
+			content: "width=device-width,initial-scale=1"
+		});
+		this.addMetadata("meta", { 
+			name: "theme-color", 
+			content: config.THEME_COLOR
+		});
 	},
 
 	addMetadata(elementName, properties) {
