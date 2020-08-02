@@ -66,23 +66,28 @@ body>header a:focus {
 
 /**breadcrumbs*/
 body>header>.breadcrumbs {
-    padding: 6px 12px;
+    padding: 4px 12px;
     height: 32px;
     border-radius: 5px;
 }
+body>header>.breadcrumbs * {
+    vertical-align: middle;
+}
 
 body>header>.breadcrumbs li:first-child a {
-	font-weight: 400;
-	font-family: var(--header-font);
-	color: var(--accent-color);
+	color: transparent;
+	background: url(/client/images/logo-115px.png);
+	width: 115px;
+	height: 25px;
+	display: inline-block;
 }
 
 body>header>.breadcrumbs li:after {
     content: '/';
-	padding: 0 8px;
-	color: var(--text-color-misc);
+    padding: 0 8px;
+    color: var(--text-color-misc);
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 body>header>.breadcrumbs li:last-child:after {
