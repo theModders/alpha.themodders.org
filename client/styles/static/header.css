@@ -77,10 +77,11 @@ body>header>.breadcrumbs * {
 
 body>header>.breadcrumbs li:first-child a {
 	color: transparent;
-	background: url(/client/images/logo-115px.png);
+	background: url(/client/images/logo.svg);
 	width: 115px;
 	height: 25px;
-	display: inline-block;
+    display: inline-block;
+    background-size: contain;
 }
 
 body>header>.breadcrumbs li:after {
