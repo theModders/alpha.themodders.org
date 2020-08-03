@@ -1,7 +1,8 @@
 :root {
 	--background-color: #202124;
 	--background-color-elevated: hsl(228 6% 17% / 0.7);
-	--background-color-button: rgb(138 180 248 / 0.1);
+	--background-color-button: rgb(40 50 65 / 0.8);
+	--background-color-transparent: #20212400; /*required by safari*/
 	--text-color: #e8eaed;
 	--text-color-misc: rgba(255, 255, 255, 0.5);
 	--accent-color: #ff7200;

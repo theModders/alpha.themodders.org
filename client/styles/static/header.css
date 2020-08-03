@@ -1,6 +1,7 @@
 body>header {
     --header-horizontal-margin: 16px;
     padding: 0 16px;
+    padding-right: 0;
     position: fixed;
     position: sticky;
     left: 0;
