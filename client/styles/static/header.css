@@ -27,6 +27,7 @@ body>header li {
 
 body>header>.breadcrumbs,
 body>header>.tags a {
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 16px;
     background: var(--background-color-button);
