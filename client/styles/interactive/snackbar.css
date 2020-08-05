@@ -6,7 +6,6 @@
 	padding: 24px;
 	position:absolute;
 	background: var(--background-color-elevated);
-	box-shadow: 0 10px 12px var(--background-color);
 	-webkit-backdrop-filter: blur(16px);
 	backdrop-filter: blur(16px);
 	border-radius: 4px;
