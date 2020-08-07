@@ -4,8 +4,7 @@
 @import "message.css";
 @import "thread.css";
 @import "header.css";
-@import "experiments.css";
+@import "../app/wallpaper.css";
 @import "../../fonts/open-sans/open-sans.css";
-/* @import "../../fonts/ubuntu/ubuntu.css"; */
 @import "../../fonts/poppins/poppins.css";
 @import "../../fonts/material-icons/material-icons.css";

@@ -52,7 +52,6 @@
 
 /**thread stats*/
 .thread > .stats {
-    background: var(--background-color);
     border-radius: 4px;
     padding: 6px 23px;
     margin: 18px auto;

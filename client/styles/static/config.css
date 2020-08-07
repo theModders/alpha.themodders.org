@@ -1,14 +1,14 @@
 :root {
-	--background-color: #202124;
-	--background-color-elevated: hsl(228deg 6% 17% / 97%);
-	--background-color-button: rgb(46 53 63 / 81%);
-	--background-color-transparent: #20212400; /*required by safari*/
+	--background-color: #1d1e20;
+	--background-color-elevated: #e0eaff11;
+	--background-color-button: #e0eaff11;
+	--background-color-transparent: #1d1e2000; /*required by safari*/
 	--text-color: #e8eaed;
 	--text-color-misc: rgba(255, 255, 255, 0.5);
 	--accent-color: #ff7200;
 	--accent-color-selection: #ff7200fe; /*+1 bit of transparency*/
-	--header-font: "Poppins";
-	--body-font: "Open Sans";
+	--header-font: "Poppins", sans-serif;
+	--body-font: "Open Sans", sans-serif;
 	--font-icon: "Material Icons";
 	--main-content-width: 770px;
 	--min-viewport-width: 240px;
@@ -19,9 +19,4 @@
 	--ui-control-color-4: hsl(0 0% 60%);
 }
 
-@supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {
-    :root {
-	    --background-color-button: rgb(138 180 248 / 0.1);
-		--background-color-elevated: hsl(228 6% 17% / 0.7);
-    }
-}
+/* @supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {} */

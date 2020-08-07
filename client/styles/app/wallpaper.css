@@ -1,0 +1,12 @@
+/* body {
+	background: url(/client/images/wallpaper.png);
+	background-size: cover;
+	background-position: center;
+	--background-color: black;
+}
+.thread > .message {
+	backdrop-filter: blur(20px);
+}
+.thread > .message.original {
+	background: #000000bd;
+} */
