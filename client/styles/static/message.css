@@ -66,11 +66,12 @@
 }
 
 .thread > .message > header a[rel=bookmark]:before {
-    font-family: 'Material Icons';
+    font-family: var(--font-icon);
     content: "bookmark";
     font-size: 19px;
     line-height: 21.6px;
     vertical-align: top;
+    display: var(--icon-display-inline-block, none);
 }
 
 .thread > .message > header a[rel=bookmark]:after {
@@ -100,12 +101,13 @@
 
 /* avatar placeholder */
 .thread > .message > header:before {
-    font-family: 'Material Icons';
+    font-family: var(--font-icon);
     content: "account_circle";
     font-size: 42px;
     line-height: 42px;
     color: var(--text-color-misc);
     margin-right: 10px;
+    display: var(--icon-display-inline-block, none);
 }
 
 .thread > .message .score:before {

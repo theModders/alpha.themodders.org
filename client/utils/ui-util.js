@@ -18,6 +18,17 @@ export default {
 			name: "theme-color", 
 			content: config.THEME_COLOR
 		});
+		this.hideIconsUntilLoaded(config);
+	},
+
+	hideIconsUntilLoaded(config) {
+		if (config.iconsLoaded) {
+			return;
+		}
+		config.iconsLoaded = true;
+		this.addMetadata("style", {
+			innerHTML: ":root { --icon-display-inline-block: inline-block }"
+		});
 	},
 
 	addMetadata(elementName, properties) {
@@ -26,5 +37,6 @@ export default {
 			element[propertyName] = properties[propertyName];
 		}
 		document.head.appendChild(element);
+		return element;
 	}
 }

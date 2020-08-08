@@ -5,7 +5,7 @@
 	--background-color: black;
 }
 .thread > .message {
-	backdrop-filter: blur(20px);
+	backdrop-filter: var(--background-filter-elevated);
 }
 .thread > .message.original {
 	background: #000000bd;

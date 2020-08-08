@@ -1,0 +1,7 @@
+@supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {
+	:root {
+		--background-color-button: #e0eaff11;
+		--background-color-elevated: #e0eaff11;
+		--background-filter-elevated: blur(16px);
+	}
+}

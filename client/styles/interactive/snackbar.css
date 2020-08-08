@@ -6,8 +6,8 @@
 	padding: 24px;
 	position:absolute;
 	background: var(--background-color-elevated);
-	-webkit-backdrop-filter: blur(16px);
-	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: var(--background-filter-elevated);
+	backdrop-filter: var(--background-filter-elevated);
 	border-radius: 4px;
 	color: #ddd;
 	display: flex;
