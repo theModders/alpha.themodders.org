@@ -1,7 +1,7 @@
 :root {
 	--background-color: #1d1e20;
-	--background-color-elevated: hsl(228 6% 18% / 0.94);
-	--background-color-button: hsl(228 6% 18% / 0.94);
+	--background-color-elevated: #2b2c31f0;
+	--background-color-button: #2b2c31f0;
 	--background-color-transparent: #1d1e2000; /*required by safari*/
 	--text-color: #e8eaed;
 	--text-color-misc: rgba(255, 255, 255, 0.5);
@@ -12,9 +12,9 @@
 	--font-icon: "Material Icons";
 	--main-content-width: 770px;
 	--min-viewport-width: 240px;
-	--border-color: hsl(0 0% 100% / 0.15);
-	--ui-control-color-1: hsl(0 0% 100% / 30%);
-	--ui-control-color-2: hsl(0 0% 100% / 40%);
-	--ui-control-color-3: hsl(0 0% 100% / 50%);
-	--ui-control-color-4: hsl(0 0% 100% / 60%);
+	--border-color: #ffffff26;
+    --ui-control-color-1: #ffffff4d;
+    --ui-control-color-2: #ffffff66;
+    --ui-control-color-3: #ffffff80;
+    --ui-control-color-4: #ffffff99;
 }

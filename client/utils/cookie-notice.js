@@ -19,14 +19,13 @@ export default {
 	display() {
 		UiUtil.importStyle("/styles/interactive/snackbar.css", Config);
 		this.cookieNotice = document.createElement("div");
+		this.cookieNotice.className = "snackbar";
 		this.cookieNotice.innerHTML = `
-			<div class="snackbar">
-				<div class="message">
-					This site uses cookies from Google to deliver its services and to analyze traffic.
-				</div>
-				<a href="https://policies.google.com/technologies/cookies" class="action">More details</a>
-				<button class="action accept">OK</button>
+			<div class="message">
+				This site uses cookies from Google to deliver its services and to analyze traffic.
 			</div>
+			<a href="https://policies.google.com/technologies/cookies" class="action">More details</a>
+			<button class="action accept">OK</button>
 		`;
 		this.cookieNotice.querySelector(".accept").onclick = this.accept.bind(this);
 		document.body.appendChild(this.cookieNotice);

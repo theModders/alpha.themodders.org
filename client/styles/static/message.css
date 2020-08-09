@@ -102,12 +102,13 @@
 /* avatar placeholder */
 .thread > .message > header:before {
     font-family: var(--font-icon);
-    content: "account_circle";
+    content: var(--icon-account_circle);
     font-size: 42px;
     line-height: 42px;
     color: var(--text-color-misc);
     margin-right: 10px;
     display: var(--icon-display-inline-block, none);
+    vertical-align: bottom;
 }
 
 .thread > .message .score:before {
@@ -164,7 +165,7 @@
 
 .thread > .message blockquote>cite a {
     font-weight: normal;
-    color: rgb(255 255 255 / 0.5);
+    color: #ffffff80;
 }
 
 .thread > .message blockquote {
