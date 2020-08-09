@@ -13,8 +13,8 @@
 	--main-content-width: 770px;
 	--min-viewport-width: 240px;
 	--border-color: hsl(0 0% 100% / 0.15);
-	--ui-control-color-1: hsl(0 0% 30%);
-	--ui-control-color-2: hsl(0 0% 40%);
-	--ui-control-color-3: hsl(0 0% 50%);
-	--ui-control-color-4: hsl(0 0% 60%);
+	--ui-control-color-1: hsl(0 0% 100% / 30%);
+	--ui-control-color-2: hsl(0 0% 100% / 40%);
+	--ui-control-color-3: hsl(0 0% 100% / 50%);
+	--ui-control-color-4: hsl(0 0% 100% / 60%);
 }
