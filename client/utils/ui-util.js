@@ -31,7 +31,7 @@ export default {
 		});
 	},
 
-	addMetadata(elementName, properties) {
+	addMetadata(elementName = "meta", properties = {}) {
 		const element = document.createElement(elementName);
 		for (var propertyName in properties) {
 			element[propertyName] = properties[propertyName];
