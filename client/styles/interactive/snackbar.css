@@ -4,7 +4,7 @@
 	bottom:24px;
 	right: 24px;
 	padding: 24px;
-	position:absolute;
+	position: fixed;
 	background: var(--background-color-elevated);
 	-webkit-backdrop-filter: var(--background-filter-elevated);
 	backdrop-filter: var(--background-filter-elevated);

@@ -4,7 +4,6 @@ body {
 	background: var(--background-color);
 	color: var(--text-color);
 	height: 100vh;
-	overflow-y: auto;
 	text-size-adjust: none;
 	cursor: default;
 }
@@ -12,6 +11,10 @@ body {
 * {
 	overflow: hidden;
 	box-sizing: border-box;
+}
+
+:root, body {
+	overflow-y: initial;
 }
 
 *:focus {

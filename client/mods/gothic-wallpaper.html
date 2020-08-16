@@ -5,19 +5,14 @@
 <style>
 	:root {
 		--background-color-button: #1c1d21f2;
-    	--background-color-elevated: #1c1d21f2;
+		--background-color-elevated: #1c1d21f2;
+		--background-color: black;
 	}
-	@supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {
+	@supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
 		:root {
 			--background-color-button: #e0eaff1f;
 			--background-color-elevated: #e0eaff1a;
 		}
-	}
-	body {
-		background: url(/client/images/wallpaper.jpg);
-		background-size: cover;
-		background-position: center;
-		--background-color: black;
 	}
 	.thread > .message {
 		position: relative;
@@ -25,8 +20,22 @@
 	.thread > .message.original {
 		background: #000000bd;
 	}
-	.blur-wrapper {
+	.background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: -2;
+	}
+
+	.blur {
 		clip: rect(0, auto, auto, 0);
+		background: var(--background-color);
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -34,32 +43,33 @@
 		height: 100%;
 		z-index: -1;
 	}
-	.blur-wrapper > .blur {
-		background: url(/client/images/wallpaper-blur.jpg);
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
+
+	body > .background {
+		background-image: url(/client/images/wallpaper.jpg);
+	}
+
+	.blur > .background {
+		background-image: url(/client/images/wallpaper-blur.jpg);
+		opacity: 0.8;
 	}
 </style>
 
 <script>
 	function blurBackground(element) {
 		const blurWrapper = document.createElement("div");
-		blurWrapper.className = "blur-wrapper";
+		blurWrapper.className = "blur";
 		element.appendChild(blurWrapper);
 
 		const blur = document.createElement("div");
-		blur.className = "blur";
+		blur.className = "background";
 		blurWrapper.appendChild(blur);
 	}
 	const messages = Array.from(document.querySelectorAll(".thread > .message"));
 	for (var message of messages) {
 		blurBackground(message);
 	}
+
+	const background = document.createElement("div");
+	background.className = "background";
+	document.body.appendChild(background);
 </script>
