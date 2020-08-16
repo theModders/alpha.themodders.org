@@ -44,6 +44,13 @@ body>header a:focus {
 }
 
 
+@media (max-width: 770px) {
+	body>header>* {
+        max-width: 50%;
+    }
+}
+
+
 @media (max-width: 500px) {
 	body>header {
 	    --header-horizontal-margin: 8px;
@@ -51,13 +58,10 @@ body>header a:focus {
 	body>header>* {
         margin-top: 8px;
 		margin-bottom: 0;
+        max-width: 100%;
     }
-}
-
-
-@media (max-width: 770px) {
-	body>header>* {
-        max-width: 50%;
+    body>header>.tags {
+        display: none;
     }
 }
 
