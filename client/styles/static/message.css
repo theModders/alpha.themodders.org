@@ -108,6 +108,7 @@
     color: var(--text-color-misc);
     margin-right: 10px;
     display: var(--icon-display-inline-block, none);
+    vertical-align: top;
 }
 
 .thread > .message .score:before {
