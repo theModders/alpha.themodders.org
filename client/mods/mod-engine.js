@@ -9,5 +9,12 @@ export default {
 		for (var script of Array.from(mod.querySelectorAll("script"))) {
 			Function('"use strict";\n ' + script.innerHTML)();
 		}
+		const modThemeColorElement = mod.querySelector("meta[name='theme-color']");
+		if (modThemeColorElement) {
+			const actualThemeColorElement = document.querySelector("meta[name='theme-color']");
+			if (actualThemeColorElement) {
+				actualThemeColorElement.content = modThemeColorElement.content;
+			}
+		}
 	}
 }
