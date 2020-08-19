@@ -1,0 +1,74 @@
+body>header>.breadcrumbs li:first-child a:before {
+    content: var(--icon-menu);
+    font-family: var(--font-icon);
+    font-size: 24px;
+    color: var(--text-color);
+    width: var(--menu-button-width);
+}
+
+body>header>.breadcrumbs li:first-child a {
+    --menu-button-width: 32px;
+    width: calc(115px + var(--menu-button-width));
+    background-position-x: var(--menu-button-width);
+}
+
+.main-menu:not(.open) {
+	display: none;
+}
+
+.main-menu {
+    display: block;
+    z-index: 28;
+    background: var(--background-color-elevated);
+    -webkit-backdrop-filter: var(--background-filter-elevated);
+    backdrop-filter: var(--background-filter-elevated);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-height: 100vh;
+    width: 250px;
+    padding-top: 65px;
+    padding-left: 15px;
+}
+
+.main-menu a {
+    display: table;
+    color: white;
+    font-family: var(--header-font);
+    font-weight: 500;
+    border-radius: 5px;
+    margin: 0;
+    padding: 7px 15px;
+}
+
+.main-menu a:hover {
+    -webkit-backdrop-filter: var(--background-filter-elevated);
+    backdrop-filter: var(--background-filter-elevated);
+    color: var(--accent-color);
+}
+
+.main-menu a.active {
+	background: var(--background-color-elevated);
+    -webkit-backdrop-filter: var(--background-filter-elevated);
+    backdrop-filter: var(--background-filter-elevated);
+	font-weight: bold;
+}
+
+@media (min-width: 1400px) {
+    .thread {
+        --sidebar-width: 300px;
+	}
+	
+	.main-menu {
+		position: absolute;
+		top: 120px;
+		left: 0;
+		max-height: none;
+		padding-top: 0;
+		padding-left: 0;
+		background: transparent;
+		-webkit-backdrop-filter: none;
+		backdrop-filter: none;
+	}
+}
