@@ -30,6 +30,8 @@ body:not(.main-menu-open) .main-menu {
     padding-top: 65px;
     padding-left: 15px;
 	width: 250px;
+    padding-bottom: 10px;
+    border-radius: 0 0 8px 0;
 }
 
 .main-menu a {
