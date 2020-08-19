@@ -5,7 +5,6 @@
 	font-size: 14px;
 	line-height: 1.8;
 	position: relative;
-	overflow: visible;
 }
 
 .thread>h1 {
@@ -85,6 +84,13 @@
 }
 
 @media (min-width: 1100px) {
+    .thread {
+        --sidebar-width: 200px;
+        max-width: calc(var(--sidebar-width) + var(--main-content-width) + var(--sidebar-width));
+        padding-left: var(--sidebar-width);
+        padding-right: var(--sidebar-width);
+    }
+
     .thread > .stats td:last-child {
         line-height: 1;
     }
@@ -92,11 +98,11 @@
     .thread > .stats {
         background: transparent;
         position: absolute;
-        top: 140px;
-        width: 200px;
+        top: 220px;
+        width: var(--sidebar-width);
         padding: 0;
         margin: 0;
-        right: -200px;
+        right: 0;
     }
     
     .thread > .stats tr {
