@@ -34,7 +34,7 @@ body>header>.breadcrumbs li:first-child a {
 
 .main-menu a {
     display: table;
-    color: white;
+    color: var(--text-color);
     font-family: var(--header-font);
     font-weight: 500;
     border-radius: 5px;
@@ -57,8 +57,10 @@ body>header>.breadcrumbs li:first-child a {
 
 @media (min-width: 1400px) {
     .thread {
-        --sidebar-width: 300px;
-	}
+        --menu-width: 300px;
+        max-width: calc(var(--menu-width) + var(--main-content-width) + var(--sidebar-width));
+        padding-left: var(--menu-width);
+    }
 	
 	.main-menu {
 		position: absolute;
