@@ -12,7 +12,7 @@ body>header>.breadcrumbs li:first-child a {
     background-position-x: var(--menu-button-width);
 }
 
-.main-menu:not(.open) {
+body:not(.main-menu-open) .main-menu {
 	display: none;
 }
 
@@ -27,9 +27,9 @@ body>header>.breadcrumbs li:first-child a {
     top: 0;
     left: 0;
     max-height: 100vh;
-    width: 250px;
     padding-top: 65px;
     padding-left: 15px;
+	width: 250px;
 }
 
 .main-menu a {
@@ -55,22 +55,48 @@ body>header>.breadcrumbs li:first-child a {
 	font-weight: bold;
 }
 
-@media (min-width: 1400px) {
-    .thread {
-        --menu-width: 300px;
-        max-width: calc(var(--menu-width) + var(--main-content-width) + var(--sidebar-width));
-        padding-left: var(--menu-width);
-    }
+
+@media (min-width: 900px) {
+	.main-menu-open .thread {
+		--menu-width: 200px;
+		max-width: calc(var(--menu-width) + var(--main-content-width));
+		padding-left: var(--menu-width);
+	}
 	
 	.main-menu {
+		width: initial;
+		background: transparent;
+		-webkit-backdrop-filter: none;
+		backdrop-filter: none;
 		position: absolute;
 		top: 210px;
 		left: 0;
 		max-height: none;
 		padding-top: 0;
 		padding-left: 0;
-		background: transparent;
-		-webkit-backdrop-filter: none;
-		backdrop-filter: none;
+		width: 250px;
+	}
+
+}
+
+
+@media (min-width: 1200px) {
+	.main-menu-open .thread {
+		--menu-width: 300px;
+		max-width: calc(var(--menu-width) + var(--main-content-width) + var(--sidebar-width));
+	}
+	
+	.main-menu {
+	}
+}
+
+@media (min-width: 1300px) {
+    .main-menu-open .thread {
+        --menu-width: 300px;
+        max-width: calc(var(--menu-width) + var(--main-content-width) + var(--sidebar-width));
+        padding-left: var(--menu-width);
+    }
+	
+	.main-menu {
 	}
 }

@@ -7,7 +7,7 @@ import Resources from "./resources.js";
 export default {
 	buttonElement: null,
 	menuElement: null,
-	activeClass: "open",
+	activeClass: "main-menu-open",
 	items: [
 		{ label: Resources.MainMenu.HOME, href: "/" },
 		{ label: Resources.MainMenu.SIGN_IN, href: "/sign-in" },
@@ -43,10 +43,10 @@ export default {
 
 	onClick(e) {
 		e.preventDefault();
-		if (this.menuElement.classList.contains(this.activeClass)) {
-			this.menuElement.classList.remove(this.activeClass);
+		if (document.body.classList.contains(this.activeClass)) {
+			document.body.classList.remove(this.activeClass);
 		} else {
-			this.menuElement.classList.add(this.activeClass);
+			document.body.classList.add(this.activeClass);
 		}
 	}
 }
